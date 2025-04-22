@@ -32,6 +32,7 @@ public class GestorCites {
         }
         while (i < cites.size()) {
             System.out.println((i + 1) + ". " + cites.get(i));
+            i++;
         }
     }
 
