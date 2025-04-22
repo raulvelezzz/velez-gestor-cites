@@ -42,7 +42,10 @@ public class GestorCites {
             String linia;
             while ((linia = br.readLine()) != null) {
                 String[] parts = linia.split(";");
-                cites.add(new Cita(parts[0], parts[1], parts[2]));
+                if (parts.length == 3) {
+                    cites.add(new Cita(parts[0], parts[1], parts[2]));
+                }
+
             }
         } catch (IOException e) {
             System.out.println("No s'ha trobat el fitxer de cites. Es crearà un de nou.");
